@@ -1,0 +1,30 @@
+# общие
+.DS_Store
+.vscode
+.idea
+*.log
+logs/
+
+# env и секреты
+.env
+.env.*
+!.env.example
+
+# docker артефакты/тома (если вдруг есть локальные папки)
+pgdata/
+uploads/
+
+# зависимости из пакетов
+server/node_modules/
+client/node_modules/
+
+# сборки
+client/dist/
+client/build/
+server/dist/
+server/build/
+
+# покрытия/кэши
+**/coverage/
+**/.cache/
+**/.tmp/
