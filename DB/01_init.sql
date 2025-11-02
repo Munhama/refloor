@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS materials (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  price_per_m2 NUMERIC(10,2) NOT NULL,
+  pack_m2 NUMERIC(10,2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS laying_patterns (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  waste_percent NUMERIC(10,2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS skirting (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  price_per_meter NUMERIC(10,2) NOT NULL,
+  piece_length_m NUMERIC(10,2) NOT NULL DEFAULT 2.5
+);
