@@ -1,3 +1,5 @@
+import "./field.scss";
+
 export default function SelectField({
   label,
   value,
@@ -7,7 +9,7 @@ export default function SelectField({
   getValue,
 }) {
   return (
-    <label className="">
+    <label className="field">
       <span>{label}</span>
       <select value={value ?? ""} onChange={(e) => onChange?.(e.target.value)}>
         {options?.length ? null : <option value="">—</option>}

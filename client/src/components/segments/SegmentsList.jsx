@@ -1,3 +1,5 @@
+import "./segment.scss";
+
 import SegmentRow from "./SegmentRow";
 
 export default function SegmentsList({ segments, setSegments }) {
@@ -11,7 +13,8 @@ export default function SegmentsList({ segments, setSegments }) {
     copy.splice(index, 1);
     setSegments(copy.length ? copy : [{ width_m: 3, length_m: 4 }]);
   };
-  const add = () => setSegments([...segments, { width_m: 3, length_m: 4 }]);
+  const add = () =>
+    setSegments([...segments, { width_m: null, length_m: null }]);
 
   return (
     <>
@@ -25,7 +28,7 @@ export default function SegmentsList({ segments, setSegments }) {
           onRemove={() => remove(index)}
         />
       ))}
-      <button type="button" className="btn" onClick={add}>
+      <button type="button" className="btn add" onClick={add}>
         + Добавить сегмент
       </button>
     </>

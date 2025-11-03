@@ -1,3 +1,5 @@
+import "./home.scss";
+
 import { useEffect, useMemo, useState } from "react";
 
 import { useDictionaries } from "../hooks/useDictionaries";
@@ -13,7 +15,7 @@ export default function Home() {
   const { materials, patterns, skirting, loading, error } = useDictionaries();
 
   // Состояния
-  const [segments, setSegments] = useState([{}]);
+  const [segments, setSegments] = useState([{ width_m: 3, length_m: 4 }]);
   const [materialId, setMaterialId] = useState(null);
   const [patternId, setPatternId] = useState(null);
 
@@ -60,7 +62,7 @@ export default function Home() {
     );
 
   return (
-    <div className="wrapper">
+    <>
       <div className="left">
         <div className="element">
           <h2>Материалы</h2>
@@ -92,7 +94,7 @@ export default function Home() {
 
         <div className="element">
           <h2>Плинтус</h2>
-          <label className="">
+          <label className="field checkbox">
             <input
               type="checkbox"
               checked={includeSkirting}
@@ -124,6 +126,6 @@ export default function Home() {
           <QuoteSummary quote={quote} />
         </div>
       </div>
-    </div>
+    </>
   );
 }

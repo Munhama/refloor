@@ -1,9 +1,11 @@
+import "./quote.scss";
+
 export default function QuoteSummary({ quote }) {
   if (!quote) return null;
   return (
     <>
       <h2>Итоги</h2>
-      <ul>
+      <ul className="quote">
         <li>
           <span>Площадь</span>
           <b>{quote.area_m2} м²</b>

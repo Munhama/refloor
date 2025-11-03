@@ -1,0 +1,17 @@
+.quote {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f1f5f9;
+        &.total {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}

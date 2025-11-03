@@ -1,3 +1,5 @@
+import "../segments/segment.scss";
+
 import DoorwayRow from "./DoorwayRow";
 
 export default function DoorwaysList({ doorways, setDoorways }) {
@@ -26,7 +28,7 @@ export default function DoorwaysList({ doorways, setDoorways }) {
           onRemove={() => remove(index)}
         />
       ))}
-      <button type="button" className="btn" onClick={add}>
+      <button type="button" className="btn add" onClick={add}>
         + Добавить проём
       </button>
     </>

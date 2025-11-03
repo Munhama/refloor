@@ -1,3 +1,5 @@
+import "./field.scss";
+
 export default function NumberField({
   label,
   value,
@@ -7,7 +9,7 @@ export default function NumberField({
   ...rest
 }) {
   return (
-    <label className="">
+    <label className="field">
       <span>{label}</span>
       <input
         type="number"
