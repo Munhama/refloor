@@ -12,7 +12,9 @@ export default function QuoteSummary({ quote }) {
         </li>
         <li>
           <span>С учётом запаса</span>
-          <b>{quote.area_with_waste_m2} м²</b>
+          <b>
+            {quote.area_with_waste_m2} м² - {quote.waste_percent}%
+          </b>
         </li>
         <li>
           <span>Упаковок</span>

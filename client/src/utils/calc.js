@@ -54,6 +54,7 @@ export function calculateQuote({
   const totals = {
     area_m2: round2(totalArea),
     area_with_waste_m2: round2(areaWithWaste),
+    waste_percent: Number(pattern?.waste_percent) || 0,
     packs,
     material_area_m2: round2(materialArea),
     material_cost: materialCost,
